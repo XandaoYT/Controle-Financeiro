@@ -1,0 +1,70 @@
+body {
+  background-image: url('https://contasonline.blob.core.windows.net/arquivos/postagens/c-168-sf1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #2a2a2a;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 5px solid;
+}
+
+li.entrada {
+  border-color: #4caf50;
+}
+
+li.saida {
+  border-color: #f44336;
+}
+
+#saldo {
+  color: #03dac5;
+}

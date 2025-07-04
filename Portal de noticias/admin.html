@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Admin - Notícias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="admin-wrapper">
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#">📄 Criar Notícia</a></li>
+        <li><a href="#">📝 Editar Notícias</a></li>
+        <li><a href="#" id="logout">🔓 Sair</a></li>
+      </ul>
+    </aside>
+
+    <main class="admin-main">
+      <h1>✍️ Gerenciar Notícias</h1>
+      <form id="form-noticia" class="card">
+        <input type="text" id="titulo" placeholder="Título da notícia" required>
+        <textarea id="conteudo" placeholder="Conteúdo da notícia" required></textarea>
+        <input type="file" id="imagem">
+        <input type="hidden" id="edit-index">
+        <button type="submit" class="btn">💾 Salvar Notícia</button>
+      </form>
+
+      <section>
+        <h2>🗂️ Notícias Cadastradas</h2>
+        <div id="lista-admin" class="grid-noticias"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

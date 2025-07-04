@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Controle Financeiro</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dashboard Financeiro</h1>
+
+    <div class="saldo">
+      <h2>Saldo Atual: <span id="saldo">R$ 0,00</span></h2>
+    </div>
+
+    <form id="form-transacao">
+      <input type="text" id="descricao" placeholder="Descrição" required />
+      <input type="number" id="valor" placeholder="Valor (use negativo para despesas)" required />
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <ul id="lista-transacoes"></ul>
+    <canvas id="grafico" height="100"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
