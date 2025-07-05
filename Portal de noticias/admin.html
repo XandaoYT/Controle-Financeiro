@@ -3,33 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painel Admin - Notícias</title>
+  <title>Painel Admin - Portal de Notícias</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="admin-body">
+  <header class="admin-header">
+    <div class="logo">📰 MeuPortal</div>
+    <div class="user-controls">
+      <span>👤 Admin</span>
+      <button id="logout" class="btn small">🔓 Sair</button>
+    </div>
+  </header>
+
   <div class="admin-wrapper">
     <aside class="sidebar">
       <h2>Menu</h2>
       <ul>
-        <li><a href="#">📄 Criar Notícia</a></li>
-        <li><a href="#">📝 Editar Notícias</a></li>
-        <li><a href="#" id="logout">🔓 Sair</a></li>
+        <li><a href="#" onclick="mostrarSecao('ver')">📰 Ver Notícias</a></li>
+        <li><a href="#" onclick="mostrarSecao('criar')">✍️ Criar Notícia</a></li>
+        <li><a href="#" onclick="mostrarSecao('rejeitadas')">🚫 Rejeitar Notícia</a></li>
+        <li><a href="#" onclick="mostrarSecao('excluir')">🗑️ Excluir Notícias</a></li>
       </ul>
     </aside>
 
     <main class="admin-main">
-      <h1>✍️ Gerenciar Notícias</h1>
-      <form id="form-noticia" class="card">
-        <input type="text" id="titulo" placeholder="Título da notícia" required>
-        <textarea id="conteudo" placeholder="Conteúdo da notícia" required></textarea>
-        <input type="file" id="imagem">
-        <input type="hidden" id="edit-index">
-        <button type="submit" class="btn">💾 Salvar Notícia</button>
-      </form>
-
-      <section>
-        <h2>🗂️ Notícias Cadastradas</h2>
+      <section id="secao-ver" class="secao">
+        <h1>📰 Notícias Salvas</h1>
         <div id="lista-admin" class="grid-noticias"></div>
+      </section>
+
+      <section id="secao-criar" class="secao hidden">
+        <h1>✍️ Criar Notícia</h1>
+        <form id="form-noticia" class="card">
+          <input type="text" id="titulo" placeholder="Título da notícia" required>
+          <textarea id="conteudo" placeholder="Conteúdo da notícia" required></textarea>
+          <input type="file" id="imagem">
+          <input type="hidden" id="edit-index">
+          <button type="submit" class="btn">💾 Salvar Notícia</button>
+        </form>
+      </section>
+
+      <section id="secao-rejeitadas" class="secao hidden">
+        <h1>🚫 Notícias Rejeitadas</h1>
+        <p>Funcionalidade futura.</p>
+      </section>
+
+      <section id="secao-excluir" class="secao hidden">
+        <h1>🗑️ Excluir Notícias</h1>
+        <p>Use a opção excluir na seção "Ver Notícias".</p>
       </section>
     </main>
   </div>
